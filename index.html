@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portfólio Retro da Gabrielle</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- Tela de Introdução "Press Start" -->
+  <div id="intro-screen">
+    <div class="intro-box">
+      <h2>Press Start</h2>
+      <button id="start-button">Start</button>
+    </div>
+  </div>
+
+  <!-- Conteúdo do Portfólio (inicialmente oculto) -->
+  <div id="portfolio-content" style="display: none;">
+    <!-- Cabeçalho -->
+    <header>
+      <h1>Gabrielle</h1>
+      <p>QA e Desenvolvedora de Automação</p>
+      <nav>
+        <a href="#sobre">Sobre Mim</a>
+        <a href="#skills">Skills</a>
+        <a href="#projetos">Projetos</a>
+        <a href="#destaques">Destaques</a>
+        <a href="#contato">Contato</a>
+      </nav>
+    </header>
+
+    <!-- Banner Inicial -->
+    <section id="inicio">
+      <h2>Bem-vindo ao meu portfólio!</h2>
+    </section>
+
+    <!-- Seção de Destaques -->
+    <section id="destaques">
+      <h2>Destaques</h2>
+      <p>Aqui estão alguns dos meus projetos mais recentes e conquistas!</p>
+      <div class="destaques-grid">
+        <div class="destaque-card">
+          <h3>Programa de Bolsas da Compass UOL</h3>
+          <p>Participei do programa e adquiri conhecimentos valiosos em automação de testes.</p>
+          <a href="https://www.linkedin.com/feed/update/urn:li:activity:7223688014386855936/">Ver Certificado</a>
+        </div>
+        <div class="destaque-card">
+          <h3>Certificação AWS Cloud Practitioner (CLF-C02)</h3>
+          <p>Certificação obtida, validando meus conhecimentos em fundamentos de cloud computing com a AWS.</p>
+          <a href="https://cp.certmetrics.com/amazon/en/public/verify/credential/05b498798e05474eaac3167dcd05fdda" target="_blank">Ver Certificado</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Seção Sobre Mim -->
+    <section id="sobre">
+      <h2>Sobre Mim</h2>
+      <p>Oi! Eu sou a <strong>Gabrielle</strong>, adoro jogos e o mundo da tecnologia. Sou especializada em garantir qualidade e automação de testes em projetos ágeis. Minha jornada começou como estagiária, onde ganhei experiência em automação de testes. Agora, já passei de fase e sou uma <strong>QA trainee</strong>!</p>
+      <p>Quando não estou desvendando códigos ou fazendo documentações, você provavelmente vai me encontrar explorando algum jogo ou assistindo alguma série. 🎮✨</p>
+      <p>Ah, e sim, <strong>"game over"</strong> não existe no meu vocabulário. Sempre tem um "continue"! 😎</p>
+    </section>
+
+    <!-- Seção de Skills -->
+<!-- Seção de Skills -->
+<!-- Seção de Skills -->
+<section id="skills">
+  <h2>Minhas Skills</h2>
+  <div class="skills-grid">
+    <div class="skill-category">
+      <h3>Desenvolvimento Front-End</h3>
+      <p>HTML, CSS, JS, Figma</p>
+    </div>
+    <div class="skill-category">
+      <h3>Automação e Testes</h3>
+      <p>JMeter, Robot Framework, Postman, Newman</p>
+    </div>
+    <div class="skill-category">
+      <h3>Banco de Dados e APIs</h3>
+      <p>SQL, API Rest, API SOAP, Python</p>
+    </div>
+    <div class="skill-category">
+      <h3>Metodologias Ágeis</h3>
+      <p>SCRUM, Kanban</p>
+    </div>
+  </div>
+</section>
+
+
+    <!-- Seção de Projetos -->
+    <section id="projetos">
+      <h2>Projetos</h2>
+      <div class="projetos-grid">
+        <div class="projeto-card">
+          <h3>Testes de API com Postman</h3>
+          <p>Um conjunto de testes automatizados para uma API REST simples, verificando as requisições GET, POST, PUT e DELETE. Usei o Postman para criar e validar os testes, garantindo a consistência de respostas e performance da API.</p>
+          <a href="https://github.com/gabi0201/postman-api-tests" target="_blank">Ver Projeto</a>
+        </div>
+        <div class="projeto-card">
+          <h3>Interface da Netflix com Figma</h3>
+          <p>Protótipo da interface da Netflix, com funcionalidades como recomendações personalizadas e </p>
+          <a href="#">Ver Projeto</a>
+        </div>
+        <div class="projeto-card">
+          <h3>Testes de Carga com JMeter</h3>
+          <p>Teste de carga para medir a performance de uma API sob alta demanda usando JMeter.</p>
+          <a href="https://github.com/gabi0201/Testes_API_JMeter" target="_blank">Ver Projeto</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Seção de Contato -->
+    <section id="contato">
+      <h2>Contato</h2>
+      <p>Entre em contato comigo através das redes sociais ou envie um e-mail para<a href="mailto:gabrielle@example.com">gabi.0201@hotmail.com</a>.</p>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+      <p>© 2024 Gabrielle - Game Over!</p>
+      <div class="social-icons">
+        <a href="https://github.com/gabi0201" target="_blank"><img src="/img/github.png" alt="GitHub"></a>
+        <a href="https://www.linkedin.com/in/gabrielle-amaral-b799b1178/" target="_blank"><img src="/img/linkedin.png" alt="LinkedIn"></a>
+      </div>
+    </footer>
+  </div>
+
+  <script>
+    // Exibe o portfólio após clicar no botão Start
+    document.getElementById('start-button').addEventListener('click', function() {
+      document.getElementById('intro-screen').style.display = 'none';
+      const portfolioContent = document.getElementById('portfolio-content');
+      portfolioContent.style.display = 'block';
+      portfolioContent.classList.add('fade-in');
+    });
+  </script>
+
+</body>
+</html>

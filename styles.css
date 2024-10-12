@@ -1,0 +1,261 @@
+/* Estilos gerais */
+body {
+    font-family: 'Roboto', sans-serif; /* Fonte mais clean */
+    background-color: #121212; /* Fundo escuro */
+    color: #fff; /* Texto branco */
+    margin: 0;
+    padding: 0;
+  }
+  
+  h1, h2 {
+    color: #ffcc00; /* Títulos em amarelo vibrante */
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  p {
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto 20px auto;
+    line-height: 1.6;
+  }
+  
+  a {
+    color: #ffcc00;
+    text-decoration: none;
+    margin: 0 10px;
+    font-size: 16px;
+  }
+  
+  a:hover {
+    text-decoration: underline;
+  }
+  
+  /* Estilos para o cabeçalho */
+  header {
+    background-color: transparent; /* Cabeçalho sem fundo sólido */
+    padding: 20px;
+    text-align: center;
+  }
+  
+  header h1 {
+    font-size: 48px;
+    margin: 0;
+  }
+  
+  header p {
+    font-size: 18px;
+    color: #ccc; /* Descrição com tom mais claro */
+  }
+  
+  nav {
+    margin-top: 10px;
+  }
+  
+  nav a {
+    font-size: 14px;
+    padding: 5px 15px;
+    border: 1px solid #ffcc00;
+    border-radius: 5px;
+    transition: background-color 0.3s, color 0.3s;
+  }
+  
+  nav a:hover {
+    background-color: #ffcc00;
+    color: #121212;
+  }
+  
+  /* Seção de Banner Inicial */
+  #inicio {
+    padding: 60px 0;
+  }
+  
+  #inicio h2 {
+    font-size: 36px;
+    color: #ffcc00;
+  }
+  
+  /* Seção de Destaques */
+  #destaques {
+    padding: 60px 0;
+    text-align: center;
+  }
+  
+  .destaques-grid {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+  }
+  
+  .destaque-card {
+    background-color: #1f1f1f;
+    border: 1px solid #ffcc00;
+    padding: 20px;
+    width: 200px;
+    text-align: center;
+    transition: transform 0.3s;
+  }
+  
+  .destaque-card:hover {
+    transform: scale(1.05);
+  }
+  
+  /* Seção Sobre Mim */
+  #sobre {
+    padding: 60px 0;
+  }
+  
+  /* Seção de Skills */
+  #skills {
+    padding: 60px 0;
+  }
+  
+  .skills-grid {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+  }
+  
+  .skill-category {
+    background-color: #1f1f1f;
+    border: 1px solid #ffcc00;
+    padding: 20px;
+    width: 200px;
+    text-align: center;
+    transition: transform 0.3s;
+  }
+  
+  .skill-category:hover {
+    transform: scale(1.05);
+  }
+  
+  /* Seção de Projetos */
+  #projetos {
+    padding: 60px 0;
+  }
+  
+  .projetos-grid {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+  }
+  
+  .projeto-card {
+    background-color: #1f1f1f;
+    border: 1px solid #ffcc00;
+    padding: 20px;
+    width: 200px;
+    text-align: center;
+    transition: transform 0.3s;
+  }
+  
+  .projeto-card:hover {
+    transform: scale(1.05);
+  }
+  
+  /* Seção de Contato */
+  #contato {
+    padding: 60px 0;
+    text-align: center;
+  }
+  
+  #contato a {
+    color: #ffcc00;
+    text-decoration: none;
+  }
+  
+  #contato a:hover {
+    text-decoration: underline;
+  }
+  
+  /* Footer */
+  footer {
+    background-color: transparent;
+    color: #ccc;
+    text-align: center;
+    padding: 20px;
+    font-size: 16px;
+  }
+  
+  .social-icons {
+    margin-top: 20px;
+  }
+  
+  .social-icons a {
+    margin: 0 10px;
+    display: inline-block;
+  }
+  
+  .social-icons img {
+    width: 32px;
+    height: 32px;
+    transition: transform 0.3s;
+  }
+  
+  .social-icons img:hover {
+    transform: scale(1.2);
+  }
+  
+  /* Estilos para a tela de introdução */
+  #intro-screen {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #121212;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .intro-box {
+    text-align: center;
+    color: white;
+    font-family: 'Press Start 2P', cursive;
+  }
+  
+  .intro-box h2 {
+    font-size: 32px;
+    margin-bottom: 20px;
+  }
+  
+  #start-button {
+    background-color: #ffcc00;
+    color: #121212;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  #start-button:hover {
+    background-color: #e6b800;
+  }
+  
+  /* Animação de entrada */
+  .fade-in {
+    animation: fadeIn 1s ease-in-out;
+  }
+  
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  
+  /* Responsividade */
+  @media (max-width: 768px) {
+    .projetos-grid, .skills-grid, .destaques-grid {
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+  
