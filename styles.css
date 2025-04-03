@@ -1,11 +1,19 @@
-/* Estilos gerais */
+:root {
+  --primary: #ffcc00;
+  --secondary: #ff6b6b;
+  --dark: #121212;
+  --darker: #0a0a0a;
+  --light: #f8f9fa;
+  --gray: #6c757d;
+  --success: #28a745;
+  --pixel-border: 2px solid var(--primary);
+}
+
 body {
-    font-family: 'Roboto', sans-serif; /* Fonte mais clean */
-    background-color: #121212; /* Fundo escuro */
-    color: #fff; /* Texto branco */
-    margin: 0;
-    padding: 0;
-  }
+  background: linear-gradient(135deg, var(--darker), var(--dark));
+  color: var(--light);
+  font-family: 'Courier New', monospace; /* Fonte estilo terminal */
+}
   
   h1, h2 {
     color: #ffcc00; /* Títulos em amarelo vibrante */
@@ -39,8 +47,18 @@ body {
   }
   
   header h1 {
-    font-size: 48px;
-    margin: 0;
+    font-size: 3.5rem;
+    text-shadow: 0 0 10px var(--primary), 0 0 20px var(--primary);
+    animation: neon-glow 1.5s ease-in-out infinite alternate;
+  }
+
+  @keyframes neon-glow {
+    from {
+      text-shadow: 0 0 5px var(--primary), 0 0 10px var(--primary);
+    }
+    to {
+      text-shadow: 0 0 10px var(--primary), 0 0 20px var(--primary), 0 0 30px var(--secondary);
+    }
   }
   
   header p {
@@ -88,23 +106,102 @@ body {
     flex-wrap: wrap;
   }
   
-  .destaque-card {
-    background-color: #1f1f1f;
-    border: 1px solid #ffcc00;
-    padding: 20px;
-    width: 200px;
+  .card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     text-align: center;
-    transition: transform 0.3s;
-  }
-  
-  .destaque-card:hover {
-    transform: scale(1.05);
+    background: rgba(31, 31, 31, 0.7);
+    border: var(--pixel-border);
+    border-radius: 0;
+    padding: 1.5rem;
+    width: 280px;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin: 10px; 
   }
   
   /* Seção Sobre Mim */
   #sobre {
     padding: 60px 0;
   }
+
+  .about-container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 2rem;
+  }
+
+  .about-content {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 2rem;
+    margin-top: 2rem;
+  }
+  
+  .about-card {
+    background: rgba(31, 31, 31, 0.7);
+    border: var(--pixel-border);
+    padding: 1.5rem;
+    width: 280px;
+    text-align: center;
+    transition: all 0.3s;
+  }
+  
+  .about-card:hover {
+    transform: translateY(-5px);
+    background: rgba(255, 204, 0, 0.1);
+  }
+  
+  .pixel-icon {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    display: inline-block;
+    animation: float 3s ease-in-out infinite;
+  }
+  
+  @keyframes float {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+  }
+  
+  .profile-header {
+    display: flex;
+    justify-content: center;
+    margin: 2rem 0;
+  }
+  
+  .profile-image {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    border: 3px solid var(--primary);
+    box-shadow: 0 0 20px rgba(255, 204, 0, 0.4);
+    object-fit: cover;
+    transition: transform 0.3s;
+    filter: sepia(30%) saturate(120%);
+  }
+  
+  .profile-image:hover {
+    transform: scale(1.05);
+  }
+  
+  @media (max-width: 768px) {
+    .about-container {
+      flex-direction: column;
+    }
+
+    
+    
+    .profile-pic {
+      width: 200px;
+      height: 200px;
+    }
+  }
+  
   
   /* Seção de Skills */
   #skills {
@@ -118,18 +215,11 @@ body {
     flex-wrap: wrap;
   }
   
-  .skill-category {
-    background-color: #1f1f1f;
-    border: 1px solid #ffcc00;
-    padding: 20px;
-    width: 200px;
-    text-align: center;
-    transition: transform 0.3s;
+  .card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(255, 204, 0, 0.2);
   }
-  
-  .skill-category:hover {
-    transform: scale(1.05);
-  }
+
   
   /* Seção de Projetos */
   #projetos {
@@ -143,19 +233,32 @@ body {
     flex-wrap: wrap;
   }
   
-  .projeto-card {
-    background-color: #1f1f1f;
-    border: 1px solid #ffcc00;
-    padding: 20px;
-    width: 200px;
-    text-align: center;
-    transition: transform 0.3s;
+  .card::before {
+    content: '';
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    right: -2px;
+    bottom: -2px;
+    border: 2px solid var(--primary);
+    z-index: -1;
+    opacity: 0;
+    transition: opacity 0.3s ease;
   }
   
-  .projeto-card:hover {
-    transform: scale(1.05);
+  .card:hover::before {
+    opacity: 1;
+    animation: border-glow 1.5s infinite alternate;
   }
-  
+
+  @keyframes border-glow {
+    from {
+      box-shadow: 0 0 5px var(--primary);
+    }
+    to {
+      box-shadow: 0 0 20px var(--primary), 0 0 30px var(--secondary);
+    }
+  }
   /* Seção de Contato */
   #contato {
     padding: 60px 0;
@@ -185,17 +288,14 @@ body {
   }
   
   .social-icons a {
-    margin: 0 10px;
-    display: inline-block;
+    color: var(--primary);
+    font-size: 2rem;
+    margin: 0 15px;
+    transition: all 0.3s;
   }
   
-  .social-icons img {
-    width: 32px;
-    height: 32px;
-    transition: transform 0.3s;
-  }
-  
-  .social-icons img:hover {
+  .social-icons a:hover {
+    color: var(--secondary);
     transform: scale(1.2);
   }
   
@@ -236,12 +336,8 @@ body {
   #start-button:hover {
     background-color: #e6b800;
   }
-  
-  /* Animação de entrada */
-  .fade-in {
-    animation: fadeIn 1s ease-in-out;
-  }
-  
+ 
+
   @keyframes fadeIn {
     from {
       opacity: 0;
@@ -258,4 +354,60 @@ body {
       align-items: center;
     }
   }
+  
+
+  .pixel-form {
+    max-width: 500px;
+    margin: 2rem auto;
+    padding: 2rem;
+    background: rgba(31, 31, 31, 0.8);
+    border: var(--pixel-border);
+    text-align: center;
+  }
+  
+  .form-group {
+    width: 100%; 
+    margin-bottom: 1.5rem;
+    text-align: center; 
+  }
+  
+  .pixel-input {
+    width: 90%;
+    max-width: 400px; 
+    padding: 0.8rem;
+    margin: 0 auto; 
+    display: block; 
+    background: var(--dark);
+    border: var(--pixel-border);
+    color: var(--light);
+  }
+  
+  .pixel-button {
+    width:auto; 
+    background: var(--primary);
+    color: var(--dark); 
+    border: none;
+    padding: 0.8rem 2rem;
+    margin: 1rem auto;
+    display: block;
+    cursor: pointer;
+    font-weight: bold; 
+    transition: all 0.3s ease;
+    font-family: 'Press Start 2P', cursive;
+    font-size: 0.9rem;
+    letter-spacing: 1px;
+  }
+  
+  .pixel-button:hover {
+    background: var(--secondary);
+    transform: translateY(-2px);
+  }
+  
+  .error-message {
+    color: var(--secondary);
+    font-size: 0.8rem;
+    display: block;
+    margin-top: 0.3rem;
+  }  
+
   

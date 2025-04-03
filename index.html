@@ -5,6 +5,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Portfólio Retro da Gabrielle</title>
   <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
 </head>
 <body>
 
@@ -16,7 +18,7 @@
     </div>
   </div>
 
-  <!-- Conteúdo do Portfólio (inicialmente oculto) -->
+  <!-- Conteúdo do Portfólio-->
   <div id="portfolio-content" style="display: none;">
     <!-- Cabeçalho -->
     <header>
@@ -34,19 +36,23 @@
     <!-- Banner Inicial -->
     <section id="inicio">
       <h2>Bem-vindo ao meu portfólio!</h2>
+      <div class="profile-header">
+        <img src="img/gabi_perfil.jpg" alt="Foto da Gabrielle" class="profile-image">
+      </div>
     </section>
+
 
     <!-- Seção de Destaques -->
     <section id="destaques">
       <h2>Destaques</h2>
       <p>Aqui estão alguns dos meus projetos mais recentes e conquistas!</p>
       <div class="destaques-grid">
-        <div class="destaque-card">
+        <div class="card">
           <h3>Programa de Bolsas da Compass UOL</h3>
           <p>Participei do programa e adquiri conhecimentos valiosos em automação de testes.</p>
           <a href="https://www.linkedin.com/feed/update/urn:li:activity:7223688014386855936/">Ver Certificado</a>
         </div>
-        <div class="destaque-card">
+        <div class="card">
           <h3>Certificação AWS Cloud Practitioner (CLF-C02)</h3>
           <p>Certificação obtida, validando meus conhecimentos em fundamentos de cloud computing com a AWS.</p>
           <a href="https://cp.certmetrics.com/amazon/en/public/verify/credential/05b498798e05474eaac3167dcd05fdda" target="_blank">Ver Certificado</a>
@@ -56,31 +62,47 @@
 
     <!-- Seção Sobre Mim -->
     <section id="sobre">
-      <h2>Sobre Mim</h2>
-      <p>Oi! Eu sou a <strong>Gabrielle</strong>, adoro jogos e o mundo da tecnologia. Sou especializada em garantir qualidade e automação de testes em projetos ágeis. Minha jornada começou como estagiária, onde ganhei experiência em automação de testes. Agora, já passei de fase e sou uma <strong>QA trainee</strong>!</p>
-      <p>Quando não estou desvendando códigos ou fazendo documentações, você provavelmente vai me encontrar explorando algum jogo ou assistindo alguma série. 🎮✨</p>
-      <p>Ah, e sim, <strong>"game over"</strong> não existe no meu vocabulário. Sempre tem um "continue"! 😎</p>
+      <div class="about-container">
+        <h2>Sobre Mim</h2>
+        <div class="about-content">
+          <div class="about-card">
+            <div class="pixel-icon">🎮</div>
+            <h3>Minha Jornada</h3>
+            <p>De estagiária a QA Trainee, minha paixão por tecnologia e qualidade me levou a dominar automação de testes em projetos ágeis.</p>
+          </div>
+          
+          <div class="about-card">
+            <div class="pixel-icon">💻</div>
+            <h3>Meu Dia a Dia</h3>
+            <p>Entre códigos, documentações e reuniões ágeis, garanto que cada software tenha a qualidade que os usuários merecem.</p>
+          </div>
+          
+          <div class="about-card">
+            <div class="pixel-icon">✨</div>
+            <h3>Fora do Trabalho</h3>
+            <p>Gamer nas horas vagas, exploradora de séries e firme defensora que "game over" é só o começo de um novo "continue"!</p>
+          </div>
+        </div>
+      </div>
     </section>
 
-    <!-- Seção de Skills -->
-<!-- Seção de Skills -->
 <!-- Seção de Skills -->
 <section id="skills">
   <h2>Minhas Skills</h2>
   <div class="skills-grid">
-    <div class="skill-category">
+    <div class="card">
       <h3>Desenvolvimento Front-End</h3>
       <p>HTML, CSS, JS, Figma</p>
     </div>
-    <div class="skill-category">
+    <div class="card">
       <h3>Automação e Testes</h3>
       <p>JMeter, Robot Framework, Postman, Newman</p>
     </div>
-    <div class="skill-category">
+    <div class="card">
       <h3>Banco de Dados e APIs</h3>
       <p>SQL, API Rest, API SOAP, Python</p>
     </div>
-    <div class="skill-category">
+    <div class="card">
       <h3>Metodologias Ágeis</h3>
       <p>SCRUM, Kanban</p>
     </div>
@@ -92,17 +114,17 @@
     <section id="projetos">
       <h2>Projetos</h2>
       <div class="projetos-grid">
-        <div class="projeto-card">
+        <div class="card">
           <h3>Testes de API com Postman</h3>
-          <p>Um conjunto de testes automatizados para uma API REST simples, verificando as requisições GET, POST, PUT e DELETE. Usei o Postman para criar e validar os testes, garantindo a consistência de respostas e performance da API.</p>
+          <p>Um conjunto de testes automatizados para uma API REST simples...</p>
           <a href="https://github.com/gabi0201/postman-api-tests" target="_blank">Ver Projeto</a>
         </div>
-        <div class="projeto-card">
+        <div class="card">
           <h3>Interface da Netflix com Figma</h3>
           <p>Protótipo da interface da Netflix, com funcionalidades como recomendações personalizadas e </p>
           <a href="#">Ver Projeto</a>
         </div>
-        <div class="projeto-card">
+        <div class="card">
           <h3>Testes de Carga com JMeter</h3>
           <p>Teste de carga para medir a performance de uma API sob alta demanda usando JMeter.</p>
           <a href="https://github.com/gabi0201/Testes_API_JMeter" target="_blank">Ver Projeto</a>
@@ -113,16 +135,35 @@
     <!-- Seção de Contato -->
     <section id="contato">
       <h2>Contato</h2>
-      <p>Entre em contato comigo através das redes sociais ou envie um e-mail para<a href="mailto:gabrielle@example.com">gabi.0201@hotmail.com</a>.</p>
+      <form id="contact-form" class="pixel-form">
+        <div class="form-group">
+          <label for="name">Nome:</label>
+          <input type="text" id="name" name="name" required class="pixel-input">
+          <span class="error-message"></span>
+        </div>
+        <div class="form-group">
+          <label for="email">E-mail:</label>
+          <input type="email" id="email" name="email" required class="pixel-input">
+          <span class="error-message"></span>
+        </div>
+        <div class="form-group">
+          <label for="message">Mensagem:</label>
+          <textarea id="message" name="message" required class="pixel-input"></textarea>
+          <span class="error-message"></span>
+        </div>
+        <button type="submit" class="pixel-button">Enviar Mensagem</button>
+      </form>
+      <div class="social-links">
+        <p>Ou me encontre nas redes sociais:</p>
+        <div class="social-icons">
+          <a href="https://github.com/gabi0201" target="_blank"><i class="fab fa-github"></i></a>
+          <a href="https://www.linkedin.com/in/gabrielle-amaral-b799b1178/" target="_blank"><i class="fab fa-linkedin"></i></a>
+        </div>
     </section>
 
     <!-- Footer -->
     <footer>
-      <p>© 2024 Gabrielle - Game Over!</p>
-      <div class="social-icons">
-        <a href="https://github.com/gabi0201" target="_blank"><img src="/img/github.png" alt="GitHub"></a>
-        <a href="https://www.linkedin.com/in/gabrielle-amaral-b799b1178/" target="_blank"><img src="/img/linkedin.png" alt="LinkedIn"></a>
-      </div>
+      <p>© 2025 Gabrielle - Game Over!</p>
     </footer>
   </div>
 
